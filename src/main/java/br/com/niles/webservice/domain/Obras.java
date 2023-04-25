@@ -34,6 +34,14 @@ public class Obras {
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    public Obras(ObrasCadastroDTO obra) {
+        this.nomeObra = obra.nomeObra();
+        this.dataDeSolicitao = obra.dataDeSolicitacao();
+        this.dataDeEntrega = obra.dataDeEntrega();
+        this.cliente = new Cliente(obra.cliente());
+        this.status = obra.status();
+    }
+
     @Override
     public String toString() {
         return "Obras{" +

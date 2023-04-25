@@ -27,6 +27,13 @@ public class Cliente {
     @Email
     private String email;
 
+    public Cliente(ClienteCadastroDTO cliente) {
+        this.nomeCliente = cliente.nomeCliente();
+        this.nomeSolicitante = cliente.nomeSolicitante();
+        this.telefone = cliente.telefone();
+        this.email = cliente.email();
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
