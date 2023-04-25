@@ -1,6 +1,7 @@
 package br.com.niles.webservice.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 @Entity(name = "Cliente")
@@ -22,6 +23,8 @@ public class Cliente {
     private String nomeSolicitante;
 
     private String telefone;
+
+    @Email
     private String email;
 
     @Override
