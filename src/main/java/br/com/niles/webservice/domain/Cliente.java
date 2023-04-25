@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Email;
 import lombok.*;
 
 @Entity(name = "Cliente")
-@Table(name = "TB-CLIENTE")
+@Table(name = "TB_CLIENTE")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
